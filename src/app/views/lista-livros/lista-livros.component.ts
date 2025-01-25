@@ -21,6 +21,9 @@ const PAUSA = 300;
 export class ListaLivrosComponent {
   valorInput = new FormControl;
 
+  mensagemError$ = 'false';
+
+
   constructor(private service: LivroService){}
 
 
@@ -41,11 +44,7 @@ export class ListaLivrosComponent {
     }),
     map(
       items => this.todosLivrosPesquisados(items)
-    ),
-    catchError(erro => {
-      console.log(erro);
-      return throwError(() => new Error('Aconteceu um erro inesperado!'))
-    })
+    )
   )
 
 
