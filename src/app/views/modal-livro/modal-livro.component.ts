@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Livro } from '../../models/interfaces/interface';
 
 @Component({
   selector: 'app-modal-livro',
@@ -12,7 +13,7 @@ export class ModalLivroComponent {
 
   constructor() { }
 
-  @Input() livro!: Object;
+  @Input() livro!: Livro;
   statusModal: boolean = true;
   @Output() mudouModal = new EventEmitter()
 
@@ -29,6 +30,7 @@ export class ModalLivroComponent {
   }
 
   lerPrevia() {
-    window.open( '_blank');
+    window.open(this.livro.previewLink, '_blank');
   }
+
 }

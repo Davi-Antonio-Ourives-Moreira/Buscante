@@ -3,6 +3,8 @@
   <div class="busca">
     <input
       type="search"
+      [(ngModel)]="valorInput"
+      (keyup)="pesquisar()"
     >
     <button>
       <img src="/imagens/icone-busca.png" alt="Lupa de cor roxa">
