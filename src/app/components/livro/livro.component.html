@@ -1,3 +1,4 @@
+
 <div class="card">
   <img
     src="{{ livro.thumbnail != undefined ? livro.thumbnail : '/imagens/capa-indisponivel.png'}}"
@@ -16,3 +17,4 @@
 <div *ngIf="modalAberto">
   <app-modal-livro [livro]="livro" (mudouModal)="onModelChange($event)"></app-modal-livro>
 </div>
+

@@ -6,6 +6,12 @@ header {
   align-items: center;
   justify-content:space-around;
   font-family: 'Poppins', sans-serif;
+
+  @media screen and (max-width: 475px) {
+    & div{
+      display: none;
+    }
+  }
 }
 
 header a {

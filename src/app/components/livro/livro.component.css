@@ -4,10 +4,13 @@
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.2));
   margin: 24px;
   border-radius: 8px 0px 0px 8px;
+  gap: 20px;
 }
 
 img {
-  min-width: 198px;
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
 }
 
 .card {
@@ -16,7 +19,13 @@ img {
   height: 310px;
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.2));
   margin: 24px;
+  margin-bottom: 100px;
   border-radius: 8px 0px 0px 8px;
+
+  @media screen and (max-width: 475px) {
+    width: 280px;
+    flex-direction: column;
+  }
 }
 
 .info-card {

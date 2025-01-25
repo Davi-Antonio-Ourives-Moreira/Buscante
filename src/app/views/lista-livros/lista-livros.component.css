@@ -16,6 +16,10 @@ header {
   margin-bottom: 5px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   font-family: 'Poppins', sans-serif;
+
+  @media screen and (max-width: 475px) {
+    text-align: center;
+  }
 }
 
 section input {
@@ -36,6 +40,14 @@ section input {
   font-size: 16px;
   line-height: 24px;
   padding-left: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 475px) {
+    width: 100%;
+  }
 }
 
 section p {
@@ -45,6 +57,10 @@ section p {
   font-size: 16px;
   line-height: 24px;
   color: #8B8B8B;
+
+  @media screen and (max-width: 475px) {
+    text-align: center;
+  }
 }
 
 .resultados {
@@ -82,7 +98,6 @@ section button {
   position: relative;
   top: 0.3rem;
   right: 50px;
-  cursor: pointer;
 }
 
 .busca {
@@ -104,21 +119,46 @@ section button {
   justify-content: center;
   margin-left: 80px;
   margin-right: 80px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    gap: 80px;
+  }
 }
 
 .imagens {
   display: flex;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .ilustracao {
   margin-top: 72px;
   margin-left: 130px;
   margin-right: 64px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 475px) {
+    width: 80%;
+  }
 }
 
 .titulo {
   margin-top: 72px;
   margin-left: 64px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 
